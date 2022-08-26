@@ -26,13 +26,13 @@ class _GetPointsState extends State<GetPoints> {
     // TODO: implement initState
     super.initState();
     getLoc();
-    markers.add(Marker(
-      markerId: MarkerId('1'),
-      position: initialcameraposition,
-      infoWindow: InfoWindow(
-        title: 'Hi'
-      ),
-    ));
+    // markers.add(Marker(
+    //   markerId: MarkerId('1'),
+    //   position: initialcameraposition,
+    //   infoWindow: InfoWindow(
+    //     title: 'Hi'
+    //   ),
+    // ));
   }
 
   @override
