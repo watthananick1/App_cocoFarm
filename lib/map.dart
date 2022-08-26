@@ -25,6 +25,7 @@ class _GetPointsState extends State<GetPoints> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    getLoc();
     markers.add(Marker(
       markerId: MarkerId('1'),
       position: initialcameraposition,
@@ -115,7 +116,7 @@ class _GetPointsState extends State<GetPoints> {
     );
   }
   getLoc() async {
-    myLocation = "yes";
+    myLocation = "Me";
     print("myLocation $myLocation");
     bool _serviceEnabled;
     PermissionStatus _permissionGranted;
