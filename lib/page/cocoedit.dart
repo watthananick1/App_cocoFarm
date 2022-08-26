@@ -7,6 +7,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
 import 'package:phpservice/page/cocopage.dart';
+import 'package:phpservice/main.dart';
 
 class CocoEdit extends StatefulWidget {
   final String coco_id, cocovari_id, coco_start, coco_lat, coco_long;
@@ -104,7 +105,7 @@ class _CocoEditState extends State<CocoEdit> {
           fontSize: 16.0);
       Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Cocopage()),
+          MaterialPageRoute(builder: (context) => TapMain()),
       );
     } else {
       print;
@@ -219,7 +220,11 @@ class _CocoEditState extends State<CocoEdit> {
                         onPressed: () async {
                           permission = await Geolocator.requestPermission();
                           if (_currentPosition == null) {
-                            _getCurrentLocation();
+                            // _getCurrentLocation();
+                            coco_lat = _currentPosition!.latitude.toString();
+                            coco_long = _currentPosition!.longitude.toString();
+                            List gfg = [coco_lat, coco_long];
+                            coco_where!.text = gfg.toString();
                           } else {
                             coco_lat = _currentPosition!.latitude.toString();
                             coco_long = _currentPosition!.longitude.toString();

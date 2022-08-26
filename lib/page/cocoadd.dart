@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
+import 'package:phpservice/main.dart';
 
 class cocoadding extends StatefulWidget {
   const cocoadding({Key? key}) : super(key: key);
@@ -79,7 +80,7 @@ class _cocoaddingState extends State<cocoadding> {
           backgroundColor: Colors.greenAccent,
           textColor: Colors.black,
           fontSize: 16.0);
-      Navigator.of(context).pop();
+      Navigator.of(context).pop(TapMain());
     } else {
       print;
       Fluttertoast.showToast(
