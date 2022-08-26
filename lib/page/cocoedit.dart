@@ -140,7 +140,7 @@ class _CocoEditState extends State<CocoEdit> {
         actions: <Widget>[
           TextButton(
               onPressed: () {
-                Navigator.of(context).pop(context);
+                Navigator.of(context).pop(false);
                 Cocoedit();
                 editBang();
               },
