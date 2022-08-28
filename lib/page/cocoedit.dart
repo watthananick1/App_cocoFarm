@@ -46,10 +46,10 @@ class _CocoEditState extends State<CocoEdit> {
 
   @override
   void initState() {
+    super.initState();
     coco_start!.text = "";
     setFromvalue();
     getAllCategory();
-    super.initState();
   }
 
   editBang() {
@@ -77,7 +77,7 @@ class _CocoEditState extends State<CocoEdit> {
   Future Cocoedit() async {
     Uri url = Uri.parse('http://cocoworks.cocopatch.com/cocoupdate.php');
     var response = await http.post(url, body:{
-      "oco_id": widget.coco_id,
+      "coco_id": widget.coco_id,
       "coco_start": coco_start!.text,
       "cocovari_id": selectedValue,
       "coco_lat": coco_lat.toString(),
